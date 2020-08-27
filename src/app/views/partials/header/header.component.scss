@@ -1,0 +1,42 @@
+
+app-header{
+
+    .text-start{
+        text-align: left;
+    }
+    .text-center{
+        text-align: right;
+    }
+    .text-right{
+        text-align: center;
+    }
+    .cartImage{
+        width: 20%;
+        &:hover{
+            cursor: pointer !important;
+        }
+        @media only screen and (max-width: 415px){
+            width: 30%;
+        }
+        @media only screen and (min-width:416px) and (max-width: 767px){
+            width: 18%;
+        }
+        outline: none !important;
+    }
+
+    .loggedin-user-profile-image{
+        width: 7%;
+        height: 100%;
+        border-radius: 50%;
+        max-width: 100%;
+        max-height: 100%;
+        @media only screen and(min-width: 1680px){
+            height: 100% !important;
+        }
+        @media only screen and(max-width: 500px){
+            width: 60% !important;
+        }
+
+    }
+
+}

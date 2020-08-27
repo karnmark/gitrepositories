@@ -1,0 +1,44 @@
+
+app-master-detail{
+
+    .master-details{
+        margin-top: 3.5rem;
+    }
+
+    .text-start{
+        text-align: left;
+    }
+    .text-center{
+        text-align: right;
+    }
+    .text-right{
+        text-align: center;
+    }
+
+    .favourite-repos{
+        // border: 1px solid gray;
+    }
+    .public-repo{
+        &:hover{
+            color: #416fff;
+            cursor: pointer;
+            text-decoration-line: underline;
+        }
+    }
+
+    .text-decoration{
+        text-decoration: underline;
+    }
+
+    .public-repos{
+        overflow: auto;
+    }
+
+    .icon-placed{
+        margin-left: 0.5rem;
+    }
+
+    .pointer-shown{
+        cursor: pointer;
+    }
+}
