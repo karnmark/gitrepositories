@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.0.
 
+# Use nvm 10.9.0
+To install the nvm 12.0.0, command is 'nvm install 12.0.0'. After install, use it 'nvm use 12.0.0'.
+
+# After cloning - install 
+After cloning, you will get repositories folder, go inside. Then use command 'npm install --save'.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
