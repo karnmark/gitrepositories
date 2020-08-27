@@ -68,7 +68,7 @@ export class MasterDetailComponent implements OnInit {
 	 *
 	 *  */
   getDivHeight(): string {
-      let mapHeight = window.innerHeight * 0.65;
+      let mapHeight = window.innerHeight * 0.425;
       if (window.innerWidth < 768) {
         return 'auto';
       } else {

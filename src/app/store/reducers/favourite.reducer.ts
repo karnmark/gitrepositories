@@ -1,31 +1,41 @@
 import { FavouriteItem } from '../models/favourite-item.model';
 import { FavouriteAction, FavouriteActionTypes } from '../actions/favourite.actions';
-import { element } from 'protractor';
 
 const initialState: FavouriteItem[] = [];
 
 export function FavouriteReducer(
-    state:any[] = initialState,
+    state: any[] = initialState,
     action: FavouriteAction) {
-    console.log("favourite action", action,  FavouriteActionTypes, state);
-
     switch (action.type) {
         case FavouriteActionTypes.ADD_ITEM:
-            state.forEach(element=>{
-                if(element.id == action.payload.id){
-                    element.favourite = true;
-                }
-            })
+            if (state && state.length > 0) {
+                return Object.assign([], (state.map((item) => {
+                    if (item.id === action.payload.id) {
+                        return {
+                            ...item,
+                            favourite: true
+                        };
+                    } else {
+                        return item;
+                    }
+                })));
+            }
             return [...state];
         case FavouriteActionTypes.REMOVE_ITEM:
-            state.forEach(element => {
-                if (element.id == action.payload.id) {
-                    element.favourite = false;
-                }
-            })
+            if (state && state.length > 0) {
+                return Object.assign([], (state.map((item) => {
+                    if (item.id === action.payload.id) {
+                        return {
+                            ...item,
+                            favourite: false
+                        };
+                    } else {
+                        return item;
+                    }
+                })));
+            }
             return [...state];
         case FavouriteActionTypes.LOAD_ITEM:
-            // destinationArray.push(...sourceArray);
             return state = action.payload;
         default:
             return state;

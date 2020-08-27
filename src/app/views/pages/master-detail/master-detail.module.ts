@@ -4,7 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { MasterDetailComponent } from './master-detail.component';
 import { PartialsModule } from '../../partials/partials.module';
 import { PipeModule } from '../../pipes/pipe/pipe.module';
-import {  } from "module";
 import { FavouritePipe } from '../../pipes/pipe/favourite.pipe';
 const routes: Routes = [
   {

@@ -1,8 +1,10 @@
 
 app-master-detail{
-
+    .fluid-container{
+        overflow-x: none !important;
+    }
     .master-details{
-        margin-top: 3.5rem;
+        margin-top: 4rem;
     }
 
     .text-start{
@@ -15,12 +17,13 @@ app-master-detail{
         text-align: center;
     }
 
-    .favourite-repos{
-        // border: 1px solid gray;
+    .remove-item{
+        margin-left: 0.5rem;
+        cursor: pointer;
     }
     .public-repo{
         &:hover{
-            color: #416fff;
+            color: #55a7ff;
             cursor: pointer;
             text-decoration-line: underline;
         }

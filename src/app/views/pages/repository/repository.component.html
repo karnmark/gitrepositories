@@ -16,12 +16,12 @@
             </div>
         </div>
     </div>
-    <div class="row mt-4 p-3">
+    <div class="row mt-2 p-3">
         <div class="col-2">
             <div class="text-left text-decoration">
                 <h5>Contributors</h5>
             </div>
-            <div class="favourite-repos">
+            <div class="favourite-repos" [ngStyle]="{'height':getDivHeight()}">
                 <li *ngFor="let person of contributors" class="public-repo">
                     {{person.login}}
                 </li>
@@ -37,6 +37,11 @@
                     {{content}}
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <app-footer></app-footer>
         </div>
     </div>
 </div>

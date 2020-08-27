@@ -42,4 +42,17 @@ export class RepositoryComponent implements OnInit {
     });
   }
 
+  /**
+	 * @description Sets the height based on the window screen
+	 *
+	 *  */
+  getDivHeight(): string {
+    let mapHeight = window.innerHeight * 0.435;
+    if (window.innerWidth < 768) {
+      return 'auto';
+    } else {
+      return mapHeight + 'px';
+    }
+  }
+
 }
