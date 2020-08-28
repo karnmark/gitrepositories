@@ -68,14 +68,25 @@ export class MasterDetailComponent implements OnInit {
 	 *
 	 *  */
   getDivHeight(): string {
-      let mapHeight = window.innerHeight * 0.425;
+      let divHeight = window.innerHeight * 0.425;
       if (window.innerWidth < 768) {
         return 'auto';
       } else {
-        return mapHeight + 'px';
+        return divHeight + 'px';
       }
   }
-
+/**
+  * @description Sets the minimum height based on the window screen
+  *
+  *  */
+  getDivMinHeight(){
+    let mindivHeight = window.innerHeight * 0.385;
+    if (window.innerWidth < 768) {
+      return 'auto';
+    } else {
+      return mindivHeight + 'px';
+    }
+  }
   /**
    * @description Adds the repository to the favourite list
    *
@@ -84,6 +95,10 @@ export class MasterDetailComponent implements OnInit {
     this.store.dispatch(new AddFavouriteAction(theRepo));
   }
 
+  /**
+   * @description AdRemove the repository from the favourite list
+   *
+   *  */
   removeItem(theRepo: FavouriteItem){
     this.store.dispatch(new RemoveFavouriteAction(theRepo));
   }

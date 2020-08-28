@@ -31,6 +31,9 @@ app-master-detail{
 
     .text-decoration{
         text-decoration: underline;
+        @media only screen and(max-width: 767px){
+            text-align: center !important;
+        }
     }
 
     .public-repos{
@@ -43,5 +46,11 @@ app-master-detail{
 
     .pointer-shown{
         cursor: pointer;
+    }
+
+    .favourite-repo-listing{
+        @media only screen and(max-width: 767px){
+            margin-top: 2rem;
+        }
     }
 }

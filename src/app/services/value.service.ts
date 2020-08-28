@@ -22,13 +22,11 @@ export class ValueService {
 
  /* To fetch the particular repository information */
   public getRepositoryInfo(data): Observable<any>{
-    // console.log(data[0].url);
     return this.http.get(data, {});
   }
 
   /* To fetch the contributors of a repository */
   public getContributors(data): Observable<any>{
-    console.log(data[0].contributors_url);
     return this.http.get(data[0].contributors_url, {})
   }
 

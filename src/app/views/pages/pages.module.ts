@@ -5,8 +5,6 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { RepositoryComponent } from './repository/repository.component';
 import { MasterDetailComponent } from './master-detail/master-detail.component';
 import { FavouritePipe } from '../pipes/pipe/favourite.pipe';
-// import { PipeModule } from '../pipes/pipe/pipe.module';
-
 
 
 @NgModule({
