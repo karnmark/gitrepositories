@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import * as moment from 'moment';
 
 @Component({
   selector: 'app-footer',
@@ -12,7 +11,9 @@ export class FooterComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.year = moment().format('YYYY');
+    var d = new Date();
+    var n = d.getFullYear();
+    this.year = n;
   }
 
 }
